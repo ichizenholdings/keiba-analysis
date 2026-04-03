@@ -39,3 +39,11 @@ export type {
   DiagnosisListResponse,
   DiagnosisDetailResponse,
 } from './diagnosis';
+
+export type {
+  MemoTagId,
+  MemoHorse,
+  MemoHorseListResponse,
+} from './memo-horse';
+
+export { MEMO_TAGS } from './memo-horse';

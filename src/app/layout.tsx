@@ -33,6 +33,8 @@ export default function RootLayout({
           <a href="/races" className="hover:text-blue-300 text-sm">レース一覧</a>
           <a href="/horses" className="hover:text-blue-300 text-sm">馬データ</a>
           <a href="/track-bias" className="hover:text-blue-300 text-sm">馬場バイアス</a>
+          <a href="/memo-horse" className="hover:text-blue-300 text-sm">メモ馬</a>
+          <a href="/diagnosis" className="hover:text-blue-300 text-sm">全頭診断</a>
         </nav>
         <main className="min-h-screen bg-gray-50">
           {children}
