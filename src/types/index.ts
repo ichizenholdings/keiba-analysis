@@ -23,4 +23,19 @@ export type {
   OcrResult,
   ValidationError,
   ValidationResult,
+  BiasInnerOuter,
+  BiasPace,
+  TrackBiasInput,
+  TrackBiasResponse,
+  TrackBiasListResponse,
 } from './manual-input';
+
+export type {
+  DiagnosisRank,
+  HorseDiagnosis,
+  DiagnosisRequest,
+  DiagnosisResponse,
+  DiagnosisListItem,
+  DiagnosisListResponse,
+  DiagnosisDetailResponse,
+} from './diagnosis';

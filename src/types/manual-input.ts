@@ -76,6 +76,42 @@ export interface OcrResult {
   created_at: string;
 }
 
+/** 馬場バイアス: 内外傾向 */
+export type BiasInnerOuter = '内有利' | 'やや内有利' | 'フラット' | 'やや外有利' | '外有利';
+
+/** 馬場バイアス: 前後傾向 */
+export type BiasPace = '前有利' | 'やや前有利' | 'フラット' | 'やや差し有利' | '差し有利' | '追込有利';
+
+/** 馬場バイアス入力 */
+export interface TrackBiasInput {
+  race_id: string | null;
+  race_date: string;
+  venue: string;
+  race_number: number | null;
+  surface: '芝' | 'ダート' | '障害';
+  track_condition: '良' | '稍重' | '重' | '不良';
+  moisture_level: number | null;
+  inner_outer: BiasInnerOuter;
+  pace_bias: BiasPace;
+  rail_position: number | null;
+  course_condition_detail: string | null;
+  winning_positions: string | null;
+  notes: string | null;
+}
+
+/** 馬場バイアス保存レスポンス */
+export interface TrackBiasResponse {
+  success: boolean;
+  bias_id: number;
+  message: string;
+}
+
+/** 馬場バイアス一覧レスポンス */
+export interface TrackBiasListResponse {
+  biases: (TrackBiasInput & { bias_id: number; created_at: string })[];
+  total: number;
+}
+
 /** バリデーションエラー */
 export interface ValidationError {
   field: string;
